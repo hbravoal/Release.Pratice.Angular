@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-4">
+        <div class="jumbotron">
+            <h1 class="display-4">Módulo de Netcommerce</h1>
+            <p class="lead">Acá podrás:</p>
+            <app-net-programs (ProgramSelected)="SelectedProgram( $event)"></app-net-programs>
+            <app-side-bar-net-commerce (ContentSelected)="ShowContext( $event)"></app-side-bar-net-commerce>
+
+        </div>
+
+
+
+    </div>
+    <div class="col-8" [ngSwitch]="Selected">
+        <app-net-show-users [parameterask]="parameterbyConsult" *ngSwitchCase=1></app-net-show-users>
+        <app-net-unlock-users *ngSwitchCase=2></app-net-unlock-users>
+        <app-content-net-commerce *ngSwitchDefault></app-content-net-commerce>
+    </div>
+
+</div>

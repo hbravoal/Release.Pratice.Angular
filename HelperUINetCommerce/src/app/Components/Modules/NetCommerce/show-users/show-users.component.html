@@ -1,0 +1,29 @@
+<app-net-ask-user>
+</app-net-ask-user>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Identificación</th>
+            <th>User Name</th>
+            <th>Contraseña</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor=" let item of result">
+            <td>{{item.Identification}}</td>
+            <td>{{item.UserName}}</td>
+            <td>{{item.Password}}</td>
+            <td>
+                <span *ngIf="item.IsActive" class="text-success btn btn-outline-success" id="ActiveButton">
+                  Activo
+              </span>
+            </td>
+            <td *ngIf="!item.IsActive">
+                <button class="btn btn-info">Desbloquear</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>

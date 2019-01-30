@@ -1,0 +1,19 @@
+export interface Programs {
+  ID: number;
+  NAME: string;
+  REFERENCE_ID?: any;
+  CUSTOMER_PROVIDER: string;
+  CUSTOMER_PROVIDER_SETTINGS: string;
+  DELIVERY_PROVIDER: string;
+  DELIVERY_PROVIDER_SETTINGS: string;
+  GROUP_PACKING_ORDERS: boolean;
+  BILLING_PROVIDER: string;
+  BILLING_PROVIDER_SETTINGS: string;
+  STORE_PROVIDER?: any;
+  STORE_PROVIDER_SETTINGS?: any;
+  GENERAL_SETTINGS: string;
+  ACTIVE: boolean;
+  LOGISTIC_DELIVERY_TYPE?: number;
+  GROUPING_PROVIDER_ID?: any;
+  PROGRAM_GROUP_ID: number;
+}

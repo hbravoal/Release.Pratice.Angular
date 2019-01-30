@@ -1,0 +1,5 @@
+<select class="custom-select" #item (change)="OnChangeProgram(item.value) ">
+  <option selected value="0">Seleccionar Programa</option>
+  <option *ngFor="let item of Programs; let i = index"  [value]="item.ID" [attr.id]="item.CUSTOMER_PROVIDER" >
+ {{item.NAME}}</option>
+</select>
